@@ -11,11 +11,18 @@ namespace ContaBancariaRest.Controllers
     [ApiController]
     public class ClientesController : ControllerBase
     {
+        public ClientesController(DBContexto contexto)
+        {
+            this._contexto = contexto;
+        }
+        private DBContexto _contexto;
+
         [HttpGet]
         [Route("/clientes")]
         public IActionResult Index()
         {
-            var clientes = Cliente.Clientes;
+            //var clientes = Cliente.Clientes;
+            var clientes = _contexto.Clientes.ToList();
             return StatusCode(200, clientes);
         }
 
