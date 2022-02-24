@@ -11,7 +11,7 @@ namespace ContaBancariaRest.Controllers
     public class HomeController : ControllerBase
     {
         [HttpGet]
-        [Route("/")]
+        [Route("/home")]
         public IActionResult Index()
         {
             return StatusCode(200, new { Mensagem = "Bem vindo a API" });

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\master10\\source\\repos\\ContaBancariaRest\\ContaBancariaRest\\ContaBancariaRest.csproj": {}
+    "C:\\Users\\master10\\source\\repos\\Nova pasta\\Desafio-Dev-C-Sharp\\ContaBancariaRest\\ContaBancariaRest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\master10\\source\\repos\\ContaBancariaRest\\ContaBancariaRest\\ContaBancariaRest.csproj": {
+    "C:\\Users\\master10\\source\\repos\\Nova pasta\\Desafio-Dev-C-Sharp\\ContaBancariaRest\\ContaBancariaRest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\master10\\source\\repos\\ContaBancariaRest\\ContaBancariaRest\\ContaBancariaRest.csproj",
+        "projectUniqueName": "C:\\Users\\master10\\source\\repos\\Nova pasta\\Desafio-Dev-C-Sharp\\ContaBancariaRest\\ContaBancariaRest.csproj",
         "projectName": "ContaBancariaRest",
-        "projectPath": "C:\\Users\\master10\\source\\repos\\ContaBancariaRest\\ContaBancariaRest\\ContaBancariaRest.csproj",
+        "projectPath": "C:\\Users\\master10\\source\\repos\\Nova pasta\\Desafio-Dev-C-Sharp\\ContaBancariaRest\\ContaBancariaRest.csproj",
         "packagesPath": "C:\\Users\\master10\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\master10\\source\\repos\\ContaBancariaRest\\ContaBancariaRest\\obj\\",
+        "outputPath": "C:\\Users\\master10\\source\\repos\\Nova pasta\\Desafio-Dev-C-Sharp\\ContaBancariaRest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\master10\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,6 +53,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.14, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.4.1, )"
             }
           },
           "imports": [

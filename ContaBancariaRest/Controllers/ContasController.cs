@@ -45,7 +45,7 @@ namespace ContaBancariaRest.Controllers
 
         [HttpPut]
         [Route("/contas/depositar/{id}")]
-        public IActionResult Update(int id, [FromBody] Conta depositar )
+        public IActionResult Update(int id, [FromBody] Conta depositar)
         {
             /* SOLUÇÃO PARA GRAVAR DADOS EM MEMÓRIA
             var achei = false;
@@ -64,7 +64,7 @@ namespace ContaBancariaRest.Controllers
 
             //SOLUÇÃO PARA GRAVAR DADOS NO SQL
             var conta = _contexto.Contas.Where(c => c.Numero == id).First();
-            if (conta == null) 
+            if (conta == null || depositar.Depositar <= 0)
             {
                 return StatusCode(404);
             }
@@ -100,25 +100,26 @@ namespace ContaBancariaRest.Controllers
 
             //SOLUÇÃO PARA GRAVAR DADOS NO SQL
             var conta = _contexto.Contas.Where(c => c.Numero == id).First();
-            if (conta == null)
+            if (conta == null || sacar.Sacar <= 0)
             {
                 return StatusCode(404);
             }
 
-            if (conta.Saldo >= (decimal)sacar.Sacar) 
+            if (conta.Saldo >= (decimal)sacar.Sacar)
             {
                 conta.Saldo -= (decimal)sacar.Sacar;
                 conta.Mensagem = "Saque realizado com sucesso!";
                 _contexto.Contas.Update(conta);
                 _contexto.SaveChanges();
                 return StatusCode(200, conta);
-            } else
+            }
+            else
             {
                 return StatusCode(400, "Saldo insuficiente para essa transação");
             }
         }
     }
-}       
-            
-        
+}
+
+
 
